@@ -1,0 +1,46 @@
+=== test run with 1 threads without hyperthreading ===
+# started on Sat Feb  8 16:18:35 2020
+
+
+ Performance counter stats for 'taskset -c 4 ./bodytrack sequenceB_261 4 20 4000 5 2 1 4':
+
+       127,759,501      LLC-loads                                                   
+           874,799      LLC-load-misses           #    0.68% of all LL-cache hits   
+
+      36.935101850 seconds time elapsed
+
+      36.898040000 seconds user
+       0.036001000 seconds sys
+
+
+=== test run with 2 threads without hyperthreading ===
+# started on Sat Feb  8 16:19:16 2020
+
+
+ Performance counter stats for 'taskset -c 4,1 ./bodytrack sequenceB_261 4 20 4000 5 2 2 4':
+
+       135,756,124      LLC-loads                                                   
+           829,866      LLC-load-misses           #    0.61% of all LL-cache hits   
+
+      19.671534786 seconds time elapsed
+
+      38.236317000 seconds user
+       0.080067000 seconds sys
+
+
+=== test run with 4 threads without hyperthreading ===
+# started on Sat Feb  8 16:19:40 2020
+
+
+ Performance counter stats for 'taskset -c 4,1,2,3 ./bodytrack sequenceB_261 4 20 4000 5 2 4 4':
+
+       134,703,545      LLC-loads                                                   
+         1,099,819      LLC-load-misses           #    0.82% of all LL-cache hits   
+
+     619.984969600 seconds time elapsed
+
+      41.448701000 seconds user
+       0.084580000 seconds sys
+
+
+=== test run with 2 threads with hyperthreading ===
